@@ -344,8 +344,13 @@ main {
 }
 
 .modal-content {
-    display: block;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.modal-content img{
     max-width: 80%;
     max-height: 80%;
 }
