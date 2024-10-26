@@ -308,7 +308,7 @@ main {
     width: 50px;
 }
 
-/* parte responsiva*/
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
@@ -364,3 +364,44 @@ main {
     font-weight: bold;
     cursor: pointer;
 }
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.carousel-button.prev {
+    left: 1px;
+}
+
+.carousel-button.next {
+    right: 1px;
+}
+

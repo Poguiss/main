@@ -40,4 +40,19 @@ modal.addEventListener('click', function (event) {
     }
 });
 
+function moveCarousel(button, direction) {
+    const carousel = button.closest('.carousel');
+    const images = carousel.querySelector('.carousel-images');
+    const imageWidth = images.querySelector('img').clientWidth;
+    const currentTranslate = images.style.transform || 'translateX(0px)';
+    let currentX = parseInt(currentTranslate.match(/-?\d+/)[0]);
+
+    currentX += direction * imageWidth;
+
+    const maxTranslate = -(images.childElementCount - 1) * imageWidth;
+    if (currentX > 0) currentX = maxTranslate;
+    if (currentX < maxTranslate) currentX = 0;
+
+    images.style.transform = `translateX(${currentX}px)`;
+}
 
