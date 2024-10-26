@@ -182,6 +182,7 @@ main {
     max-width: 48%;
     margin-bottom: 2rem;
     text-align: left;
+    gap: 1rem;
 }
 
 
@@ -194,9 +195,8 @@ main {
 }
 
 .produto img {
-    max-width: 45%;
     border-radius: 8px;
-    margin-right: 2rem;
+    overflow: hidden;
 }
 
 .produto h3 {
